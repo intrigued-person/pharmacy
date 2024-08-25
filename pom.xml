@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.0.6</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.zosh</groupId>
 	<artifactId>e-commerce1</artifactId>
@@ -20,6 +21,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<!-- MySQL Driver -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version> <!-- Use the latest version -->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -55,7 +63,7 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-api</artifactId>
@@ -73,27 +81,27 @@
 			<version>0.11.1</version>
 			<scope>runtime</scope>
 		</dependency>
-		
+
 		<dependency>
-	    <groupId>org.json</groupId>
-	    	<artifactId>json</artifactId>
-	    	<version>20210307</version>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20210307</version>
 		</dependency>
 
-		
+
 		<!-- https://mvnrepository.com/artifact/com.razorpay/razorpay-java -->
 		<dependency>
-		    <groupId>com.razorpay</groupId>
-		    <artifactId>razorpay-java</artifactId>
-		    <version>1.4.3</version>
+			<groupId>com.razorpay</groupId>
+			<artifactId>razorpay-java</artifactId>
+			<version>1.4.3</version>
 		</dependency>
 
 		<!-- swagger ui -->
-		   <dependency>
-		      <groupId>org.springdoc</groupId>
-		      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-		      <version>2.1.0</version>
-		   </dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.1.0</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -101,10 +109,31 @@
 			<optional>true</optional>
 		</dependency>
 
-		
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>5.0.0</version> <!-- Use the latest version -->
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Mockito JUnit Jupiter for integration with JUnit 5 -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-junit-jupiter</artifactId>
+			<version>5.0.0</version> <!-- Use the latest version -->
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Optional: AssertJ for fluent assertions -->
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>3.24.2</version> <!-- Use the latest version -->
+			<scope>test</scope>
+		</dependency>
+
+
 	</dependencies>
-	
-	
 
 
 	<build>
